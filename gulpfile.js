@@ -8,7 +8,7 @@ import sourcemaps from "gulp-sourcemaps";
 
 gulp.task("la", pa);
 function pa() {
-    gulp.src("./from")
+    gulp.src("./precss/style.less")
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoPrefixer({
@@ -16,13 +16,13 @@ function pa() {
             browsers: ["last 10 versions"]
         }))
         .pipe(gcmq())
-        .pipe(gulp.dest("./dest"))
+        .pipe(gulp.dest("./css/"))
         .pipe(csso())
         .pipe(rename({
             suffix: ".min"
         }))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("./dest"))
+        .pipe(gulp.dest("./css/"))
 }
 
 

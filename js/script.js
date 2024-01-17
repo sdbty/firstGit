@@ -1,8 +1,27 @@
 $(function () {
     // header starts
-    $(".img-none").on("click", function () {
-        $("ul").toggleClass("toggle-nav");
-    });
+
+
+    let ul = document.querySelector("ul");
+    let imgNone = document.querySelector(".img-none");
+    let xDn = document.querySelector(".x-dn");
+    let body = document.querySelector("body");
+
+
+
+    imgNone.addEventListener(`click` , toggleNav);
+    xDn.addEventListener(`click` , toggleNav)
+    function toggleNav(){
+        ul.classList.toggle("toggle-nav");
+        body.classList.toggle("overflow-hidden");
+        xDn.classList.toggle("toggle-nav");
+    }
+    function toggleNav(){
+        ul.classList.toggle("toggle-nav");
+        body.classList.toggle("overflow-hidden");
+        xDn.classList.toggle("toggle-nav");
+    }
+
     // header ends
 
 

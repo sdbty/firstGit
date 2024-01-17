@@ -2,10 +2,11 @@ header {
     width: 100%;
     min-height: 816px;
     background: #000;
-    overflow: hidden;
-
+    
     .media({
         height: auto;
+        position: relative;
+        overflow-x: hidden;
     }, 576px);
 
     nav {
@@ -15,7 +16,6 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
 
 
         .media({
@@ -32,37 +32,56 @@ header {
             width: 441px;
             display: flex;
             justify-content: space-between;
-
             .media({
                 flex-direction: column;
+                justify-content: start;
                 position: absolute;
-                width: 300px;
-                right: -320px;
-                top: 70px;
+                width: 100%;
+                height: calc(100%);
+                right: -100%;
+                background: #000;
+                top: 0;
+                padding-top: 70px;
                 transition: 1000ms;
                 z-index: 1;
             }, 576px);
 
-            a {
-                color: #b0b0b0;
-                font-weight: 600;
-                font-size: 14px;
-                font-family: @OpenSans;
-
+            li{
                 .media({
-                 display: block;
-                 margin-top: 10px;
-                 padding: 0 0 0 20px;
-                 font-size: 40px;
-                 font-weight: 600;
-                 border: 1px solid whitesmoke;
-                 background: #000;
-                }, 576px);
+                    text-align: center;
+                },576px);
+                a {
+                    color: #b0b0b0;
+                    font-weight: 600;
+                    font-size: 14px;
+                    font-family: @OpenSans;
+    
+                    .media({
+                    text-align: center;
+                     font-size: 40px;
+                     font-weight: 600;
+                     background: transparent;
+                    }, 576px);
+                }
+            }
+            .x-dn{
+                display: none;
+                .media({
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    right: 30px;
+                    color: whitesmoke;
+                    font-size: 40px;
+                    font-weight: 100;
+                    font-family: @OpenSans;
+                },576px);
             }
 
     .media({
         a:hover {
             background: #671eaa;
+            padding: 10px 20px;
         }
     }, 576px);
 
@@ -75,6 +94,7 @@ header {
                 display: block;
                 width: 40px;
                 height: 40px;
+                border-radius: 3px;
             }, 576px);
         }
 
@@ -82,7 +102,7 @@ header {
 
 .media({
     .toggle-nav {
-        right: -90px;
+        right: 0;
     }
 }
 
