@@ -1,0 +1,120 @@
+/* light == 300 , regular == 400 , semibold == 600 , bold == 700 */
+/* Open Sans */
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/OpenSans-Light.woff2");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/OpenSans-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/OpenSans-SemiBold.woff2");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/OpenSans-Bold.woff2");
+}
+
+/* Raleway */
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/Raleway-Light.woff2");
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/Raleway-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-style: normal;
+    src: url("../libs/fonts/Open_sans and Raleway(transfonter.org-20231204-124214)/woff2/Raleway-Bold.woff2");
+}
+
+@OpenSans : 'Open Sans';
+@Raleway : 'Raleway';
+
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+    width: 95%;
+    margin: auto;
+}
+
+.media(@block , @size) {
+    @media (max-width: @size) {
+        @block()
+    }
+}
+
+.media({
+    .container {
+        max-width: 1200px;
+    }
+}
+
+, 1200px);
+
+.media({
+    .container {
+        max-width: 992px;
+    }
+}
+
+, 992px);
+
+.media({
+    .container {
+        max-width: 768px;
+    }
+}
+
+, 768px);
+
+.media({
+    .container {
+        max-width: 576px;
+    }
+}
+
+, 576px);
+
+
+
+/*header starts*/
+@import url("./header.less");
+/*header ends*/
+/*sectio starts*/
+@import url("./section.less");
+/*section ends*/
+/*footer starts*/
+@import url("./footer.less");
+/*footer ends*/
+

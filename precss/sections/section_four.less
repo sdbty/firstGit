@@ -1,0 +1,101 @@
+
+.section-four{
+    min-height: 592px;
+    width: 100%;
+    background: #ffffff;
+    .dfc-s-f{
+        padding-top: 100px;
+        .first-s-f{
+            min-height:102px ;
+            max-width: 410px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .media({
+                min-height: 150px
+            }, 427px);
+            .h1-1-s-f{
+                font-weight:400 ;
+                font-size: 36px;
+                font-family: @Raleway;
+                color:#212121 ;
+                text-align: center;
+                position: relative;
+            }
+            .h1-1-s-f::before{
+                position: absolute;
+                content: "";
+                width: 64px;
+                height:2px ;
+                background:#ff8b38 ;
+                top: 56px;
+                left: 50%;
+                transform: translateX(-50%);
+                .media({
+                    top: 100px
+                }, 427px);
+            }
+            .p-1-s-f{
+                font-weight: 400;
+                font-size: 14px;
+                font-family: @OpenSans;
+                text-align: center;
+                color: #a4a5a8;
+            }
+        }
+        .second-s-f{
+            max-width: 100%;
+            min-height: 200px;
+            padding-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            .media({
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+            }, 768px);
+            .one-main-s-f{
+                max-width: 350px;
+                min-height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .media({
+                    margin-top: 20px;
+                }, 768px);
+                .round-s-f{
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #ff8b38;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                }
+                .h3-s-f{
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 20px;
+                    font-family: @OpenSans;
+                    color: #333333;
+                }
+                .p-2-s-f{
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 14px;
+                    font-family: @OpenSans;
+                    color: #86878b;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
